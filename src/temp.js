@@ -49,7 +49,7 @@ class temp extends React.Component
             <form onSubmit={this.fn1} >
                  <div style={{width:"275px", height:"21px", outline:"1px solid grey", marginLeft:"auto",marginRight:"auto"}}>
                     <img  style={{height:"18px",width:"20px", filter:"hue-rotate(135deg)", top:"1px", position:"relative"}} alt=''src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbzu5D1-VLeqMhUnJCMTq_ADYBuNNabIZnoUgqHydWE1MZjiPc&s"></img>
-                    <input style={{width:"250px", top:"-4px",position:"relative", border:"none",opacity:`${this.state.celc==="Temperature in Celsius"? .7: 1}`}}  type="text " pattern="[0-9]*" id="celc" align="middle" onClick={this.fn2} value={this.state.celc==null ? `` : `${this.state.celc}`}onChange={e=>{this.setState({celc: e.target.value,farh: null })}} />
+                    <input style={{width:"250px", top:"-4px",position:"relative", border:"none",opacity:`${this.state.celc==="Temperature in Celsius"? .7: 1}`}}  type="text " pattern="[0-9]*.[0-9]*" id="celc" align="middle" onClick={this.fn2} value={this.state.celc==null ? `` : `${this.state.celc}`}onChange={e=>{this.setState({celc: e.target.value,farh: null })}} />
                 </div>
                 <br/>
             
@@ -60,7 +60,7 @@ class temp extends React.Component
                 </div>
                 <div style={{position:"relative",top:"-22px",width:"275px",height:"21px", outline:"1px solid grey",marginLeft:"auto", marginRight:"auto" }}>
                     <img  style={{height:"18px", width:"20px", filter:"contrast(150%)"}} alt=''src="https://www.shareicon.net/data/512x512/2015/09/08/97594_degree_512x512.png"></img>
-                    <input style={{width:"250px", top:"-4px", position:"relative", border:"none",opacity:`${this.state.farh==="Temperature in Fahrenheit"? .7: 1}`}}  type="text" pattern="[0-9]*" id="farh" align="middle" onClick={this.fn2} value={this.state.farh==null ? `` : `${this.state.farh}`}onChange={e=>{this.setState({farh: e.target.value,celc: null})}} />
+                    <input style={{width:"250px", top:"-4px", position:"relative", border:"none",opacity:`${this.state.farh==="Temperature in Fahrenheit"? .7: 1}`}}  type="text" pattern="[0-9]*.[0-9]*" id="farh" align="middle" onClick={this.fn2} value={this.state.farh==null ? `` : `${this.state.farh}`}onChange={e=>{this.setState({farh: e.target.value,celc: null})}} />
                 </div>
                 <br/>
                 <button type="submit" style={{opacity:"0"}} />
